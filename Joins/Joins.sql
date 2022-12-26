@@ -72,3 +72,28 @@ emp.empId = empD.empId;
 --cross join--
 select emp.empId,empName,empD.empAge,empD.empAddress,empD.empSalary from Employee emp 
 CROSS JOIN EmpDetails empD ;
+
+--self join--
+create table company(
+	empId int ,
+	empName varchar(20),
+	managerId Int,
+	City varchar(20)
+)
+
+insert into company values
+(1,'Anil',6,'Delhi'),
+(2,'Sunil',2,'Delhi'),
+(3,'Mahesh',4,'Delhi');
+
+insert into company values
+(4,'Suresh',3,'Delhi'),
+(5,'Amit',1,'Delhi'),
+(6,'Kumar',2,'Delhi');
+
+select * from company;
+
+select a.empID As "Emp_ID" , a.empName AS "Emp_Name", 
+b.empID AS "Manager ID" , b.empName AS "Manager Name"
+from company a , company b
+where a.managerId = b.empId;
