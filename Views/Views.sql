@@ -2,7 +2,7 @@
 	its a virtual table
 	it doesn't contain any data
 	fields in view are fields from one or more real tables
-	You can add SQL functions WHERE and JOIN statements to a view
+	You can add SQL functions, WHERE and JOIN statements to a view
 	 and present the data as if the data were coming from one single table.
 
 	 Why to use view? -
