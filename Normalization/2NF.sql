@@ -26,10 +26,19 @@ exec sp_help Emp2NF
 
 /*
 	In this table age is non-key column but its dependent on id as well as on
-	Qualification so we need to normalize it
+	Qualification so we need to normalize it with PK and FK
 
 */
+create table EmpAge(
+	id INT Primary Key,
+	Age Int
+)
 
+create table emp_Qua(
+	//id Int Primary key,
+	Qualification varchar(100)
+	 id FOREIGN KEY REFERENCES EmpAge(id)
+)
 
 ----how to create a composite primary key
 CREATE TABLE COMPO
