@@ -192,4 +192,53 @@ END;
 SELECT * FROM Contacts();
 
 /* IF EXISTS */
+CREATE FUNCTION sales.get_discount_amount (
+    @quantity INT,
+    @list_price DEC(10,2),
+    @discount DEC(4,2) 
+)
+RETURNS DEC(10,2) 
+AS 
+BEGIN
+    RETURN @quantity * @list_price * @discount
+END
+
+DROP FUNCTION IF EXISTS sales.get_discount_amount;
+
+/*WITH SCHEMABINDING */
+CREATE FUNCTION sales.get_discount_amount (
+    @quantity INT,
+    @list_price DEC(10,2),
+    @discount DEC(4,2) 
+)
+RETURNS DEC(10,2) 
+WITH SCHEMABINDING
+AS 
+BEGIN
+    RETURN @quantity * @list_price * @discount
+END
+
+CREATE VIEW sales.discounts
+WITH SCHEMABINDING
+AS
+SELECT
+    order_id,
+    SUM(sales.get_discount_amount(
+        quantity,
+        list_price,
+        discount
+    )) AS discount_amount
+FROM
+    sales.order_items i
+GROUP BY
+    order_id;
+
+DROP FUNCTION sales.get_discount_amount;
+
+DROP VIEW sales.discounts;
+
+DROP FUNCTION sales.get_discount_amount;
+
+
+
 
