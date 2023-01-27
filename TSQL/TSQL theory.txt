@@ -1,0 +1,15 @@
+Q. Diff between SSQL & TSQL?
+	SQL                          TSQL
+Non-procedural                    Procedural
+Open-source			  Proprietary features
+Data manipulation and		  Local variable and procedural programming language
+data controlling
+One by one submission             transfer in bulk
+
+Q. Functions in TSQL.
+Aggregate functions: It operates on any collection of values, but returns one value.
+Ranking function: It returns a ranking value for partitioning every row.
+Rowset functions: It is used as a table reference in the SQL statement.
+Scalar functions: It returns the unique value and operating the single one. In T-SQL, SQL Server supports the analytics function to depict the analytical tasks.
+
+
