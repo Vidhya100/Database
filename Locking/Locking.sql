@@ -1,6 +1,7 @@
 /*
 	LOCK -
-		Locking is the way that SQL Server manages transaction concurrency and it ensures the integrity of the data in the database, as it forces every SQL Server transaction to pass the ACID test.
+		Locking is the way that SQL Server manages transaction concurrency and it ensures the integrity of the data in the database, 
+		as it forces every SQL Server transaction to pass the ACID test.
 
 	Why do we need -
 		-To manage transaction concurrency in multi-user environment.

@@ -12,4 +12,7 @@ Ranking function: It returns a ranking value for partitioning every row.
 Rowset functions: It is used as a table reference in the SQL statement.
 Scalar functions: It returns the unique value and operating the single one. In T-SQL, SQL Server supports the analytics function to depict the analytical tasks.
 
+https://www.sqlservertutorial.net/load-sample-database/
+functions: https://www.youtube.com/watch?v=XmNDQod-KNg&list=PLKpO3lQqxJ6YlWV1xGBSRKSHX3M18b1Ft&index=35
 
+https://www.tutorialsteacher.com/csharp/design-patterns
